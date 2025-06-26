@@ -1,0 +1,38 @@
+<!-- app.component.html -->
+
+<!-- app.component.html -->
+<div class="main-container">
+<header class="header">
+  <div class="image-overlay">
+    <nav>
+      <ul class="nav-list">
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/about">About</a></li>
+        <li><a routerLink="/skills">Skills</a></li>
+        <li><a routerLink="/projects">Projects</a></li>
+        <li><a routerLink="/contact">Contact</a></li>
+      </ul>
+    </nav>
+    <h6 class="h6-header">Hola! Soy</h6>
+
+    <h1 class="h1-header">Lili Sanchez</h1>
+    <p class="p-header">Desarrollador Frontend Junior</p>
+
+ <button routerLink="/about" type="button" class="btn btn-outline-info">About me</button>
+
+
+  </div>
+</header>
+
+
+  <!-- Contenedor principal de la aplicación -->
+
+  <!--  <router-outlet /> Contenido principal de la página -->
+
+<!-- Este es el lugar donde se cargarán los componentes según la ruta activa -->
+  <router-outlet></router-outlet>
+
+<footer>
+  <p>&copy; 2025 Desarrollado por Lili Sanchez</p>
+</footer>
+</div>

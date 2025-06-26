@@ -1,0 +1,507 @@
+
+@import '../../designs';
+
+
+.home{
+  background-color: black;
+}
+
+/* -------------------------------
+  ESTILOS GENERALES PARA HOME
+------------------------------- */
+/* Contenedor principal de la sección home */
+.about {
+  padding: 20px;
+  text-align: center;
+  position: relative; /* Necesario para aplicar el efecto de desenfoque solo al fondo */
+  background-image: url('/diseño.jpg'); /* Ruta correcta de la imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  z-index: 1; /* Asegura que el contenido de la home esté encima del fondo */
+  overflow: hidden; /* Asegura que no se vea ningún desbordamiento extraño */
+}
+
+/* Pseudo-elemento para aplicar el desenfoque solo al fondo */
+.about::before {
+  content: ''; /* Crea un pseudo-elemento vacío */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/diseño.jpg'); /* Ruta correcta de la imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px); /* Aplica el desenfoque a la imagen de fondo */
+  z-index: -1; /* Asegura que el pseudo-elemento quede por debajo del contenido */
+}
+
+
+
+/* Contenedor de la imagen y el texto (flexbox) */
+.about-container {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px; /* Espacio entre imagen y texto */
+
+  /*backdrop-filter: blur(1px); /* Desenfoque */
+ /* -webkit-backdrop-filter: blur(5px); /* Para Safari */
+ margin: 0 auto; /* Asegura que se centre el contenedor */
+ border-top-style: dashed;
+ border: 0.3px solid $azul-neon; /* Borde delgado color azul neón */
+ padding: 2px; /* Ajuste del padding si lo necesitas */
+
+}
+
+/* Estilo de la imagen en la sección About Me */
+.about-image img {
+  width: 310px;
+  height: auto;
+  border-radius: 8px; /* Opcional: bordes redondeados */
+}
+
+/* Estilo del texto dentro de About Me */
+.about-text {
+  max-width: 250px;
+  text-align: right;
+  text-align: justify;
+ /* background-color: rgba(217, 37, 88, 0.167);*/
+  /*backdrop-filter: blur(1px); /* Desenfoque */
+ /* -webkit-backdrop-filter: blur(5px); /* Para Safari */
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: $azul;
+  background-color: rgba(65, 65, 65, 0.199);
+
+}
+
+
+.about-text strong {
+  color: $azul;
+}
+
+
+.ptext{
+  color: #ffffff !important;
+}
+
+
+/* -------------------------------
+  ESTILO PARA EL BOTÓN "Ver más"
+------------------------------- */
+.btn-ver-mas {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0fbeb2; /* Color de fondo */
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.btn-ver-mas:hover {
+  background-color: darken(#0fbeb2, 10%); /* Cambio de color al pasar el mouse */
+}
+
+
+/* -------------------------------
+  ESTILOS PARA LA SECCIÓN DE DETALLES
+------------------------------- */
+#about-detail {
+  padding: 20px;
+  background-color: #ffffff;
+  margin-top: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#about-detail p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.btn-light{
+  @include btn-light($fucsia-neon);
+}
+
+
+/* Estilo del texto dentro de About Me */
+.service-text {
+  text-align: center;
+  text-align: justify;
+}
+
+.service-text p {
+  font-size: 12px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: $azul;
+
+}
+
+.service-text h4 {
+  color: $azul;
+  text-align: center;
+  margin-top: 0;
+
+}
+
+.ptext{
+  color: $blanco
+}
+
+
+
+
+/* -------------------------------
+  ESTILOS PARA LA SECCIÓN DE SERVICES
+------------------------------- */
+
+.services {
+  padding: 50px;
+  text-align: center;
+  position: relative; /* Necesario para aplicar el efecto de desenfoque solo al fondo */
+  /*background-image: url('/serv1.jpeg'); /* Ruta correcta de la imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  z-index: 1; /* Asegura que el contenido de la home esté encima del fondo */
+  overflow: hidden; /* Asegura que no se vea ningún desbordamiento extraño */
+
+  display: flex;               /* Activamos flexbox */
+  flex-direction: column;      /* Coloca el título y los contenedores uno debajo del otro */
+  /*align-items: center;         /* Centra todos los elementos */
+  justify-content: flex-start; /* Alinea los elementos al principio */
+  /* Sombra negra añadida */
+
+  background-color: black;
+}
+
+/* Pseudo-elemento para aplicar el desenfoque solo al fondo */
+.services::before {
+  content: ''; /* Crea un pseudo-elemento vacío */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*background-image: url('/serv1.jpeg'); /* Ruta correcta de la imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px); /* Aplica el desenfoque a la imagen de fondo */
+  z-index: -1; /* Asegura que el pseudo-elemento quede por debajo del contenido */
+}
+
+.blue{
+  margin-bottom: 30px; /* Espacio debajo del título */
+}
+
+
+/* Contenedor que agrupa todos los service-containers */
+.service-container-wrapper {
+  display: flex;
+  flex-wrap: wrap;             /* Permite que los contenedores se envuelvan en filas si es necesario */
+  justify-content: center;     /* Centra los contenedores */
+  gap: 5px;                   /* Espacio entre los contenedores */
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.service-container {
+  /*padding-top: 40px;*/
+  width: 220px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px; /* Espacio entre imagen y texto */
+
+
+ margin: 0 auto; /* Asegura que se centre el contenedor */
+ border: 0.3px solid $azul-neon; /* Borde delgado color azul neón */
+ padding: 5px; /* Ajuste del padding si lo necesitas */
+ flex-direction: column; /* Cambiado para que el icono y el texto se apilen verticalmente */
+ background-color: rgba(65, 65, 65, 0.199);
+
+}
+
+.service-container span{
+  padding-top: 0; /* Elimina el espacio superior dentro del contenedor */
+  display: block; /* Esto asegura que el icono se coloque arriba del título */
+  align-items: center;
+  margin-bottom: 3px; /* Ajusta el espacio entre el icono y el título */
+
+}
+
+
+
+
+/* -------------------------------
+  ESTILO PARA SKILLS
+------------------------------- */
+.skill {
+
+  position: relative;
+  border: 5px solid; /* Establecemos un borde general */
+  border-image: linear-gradient(to right, #ff00ff4f 60%, #00ffff1b 50%) 1;
+  z-index: 2;
+  margin-top: 30px;
+}
+
+.skill-fila1{
+  width: 300px;
+
+}
+
+.skill-fila2{
+  width: 300px;
+
+}
+
+.skill-fila3{
+  width: 300px;
+
+}
+
+.skill-button{
+  padding-top: 60px;
+  position: relative; /* Permite ajustar su posición sin afectar el flujo de otros elementos */
+  top: 10px; /* Esto mueve el botón 10px hacia abajo (puedes ajustar este valor) */
+  z-index: 1; /* Asegura que el botón se posicione por encima de otros elementos */
+}
+
+
+.skill-line {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.skill-card {
+  color: #3b3a3a;
+  display: inline-block;
+  margin: 20px;
+  position: relative;
+}
+
+
+.label {
+  padding-right: 10px;
+  font-size: 1rem;
+}
+
+#file {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100px; /* Ajusta el tamaño de la barra */
+  height: 10px; /* Ajusta la altura de la barra */
+}
+
+#file::-webkit-progress-bar {
+  background-color: $azul-neon; /* Fondo de la barra */
+  border-radius: 10px; /* Esquinas redondeadas */
+}
+
+#file::-webkit-progress-value {
+  background-color: $fucsia; /* Color del progreso (fucsia) */
+  border-radius: 10px; /* Esquinas redondeadas */
+}
+
+#file::-moz-progress-bar {
+  background-color: $fucsia; /* Color del progreso para Firefox */
+  border-radius: 10px;
+}
+
+/* -------------------------------
+  ESTILO PARA PROJECTS
+------------------------------- */
+.projects {
+  /*padding-top: 40px;*/
+ padding: 20px;
+  text-align: center;
+  position: relative; /* Necesario para aplicar el efecto de desenfoque solo al fondo */
+  background-color:#141212;;
+  z-index: 1; /* Asegura que el contenido de la home esté encima del fondo */
+  overflow: hidden; /* Asegura que no se vea ningún desbordamiento extraño */
+}
+
+.project-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px; /* Espacio entre imagen y texto */
+  margin: 0 auto; /* Asegura que se centre el contenedor */
+  border-top-style: dashed;
+  padding: 20px; /* Ajuste del padding si lo necesitas */
+
+}
+
+.project-im{
+  border-radius: 12px; /* Bordes ligeramente redondeados, si prefieres más cuadrado ajusta el valor */
+  padding-top: 30px;
+  background-color: $gris-Arey; /* Cambia a tu color deseado, por ejemplo $gris-Arey */
+  border: 2px solid #191435; /* Borde del mismo color que el fondo */
+  margin: 20px; /* Márgenes alrededor del contenedor */
+  width: 500px;
+  height: 200px;
+
+  /* Efecto cubo 3D */
+  box-shadow:
+    10px 10px 20px rgba(0, 0, 0, 0.2),  /* Sombra en la parte inferior y lateral derecha */
+    -10px -10px 20px rgba(46, 58, 220, 0.3),  /* Sombra en la parte superior y lateral izquierda */
+    0 10px 15px rgba(47, 46, 46, 0.2); /* Sombra adicional para más profundidad */
+
+  transform: translateY(-5px); /* Hace que el cubo parezca elevado */
+  transition: all 0.3s ease; /* Transición suave al hacer hover */
+}
+
+.project-im:hover {
+  transform: translateY(-10px); /* Aumenta la elevación cuando el mouse pasa sobre el contenedor */
+  box-shadow:
+    12px 12px 25px rgba(0, 0, 0, 0.3),  /* Sombra más fuerte al pasar el mouse */
+    -12px -12px 25px rgba(255, 255, 255, 0.4),  /* Sombra más suave en la parte superior */
+    0 12px 20px rgba(0, 0, 0, 0.3); /* Sombra adicional al pasar el mouse */
+}
+
+
+.project-text{
+  max-width: 350px;
+  text-align: right;
+  text-align: justify;
+ /* background-color: $gris-Arey;*/
+}
+
+.project-text h2{
+  color: $azul;
+}
+
+.project-image img {
+  width: 200px;
+  height: auto;
+  /*border-radius: 8px; /* Opcional: bordes redondeados */
+}
+
+
+
+/* MEDIA QUERY  ABOUT*/
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 10px;
+    width: 95%;
+  }
+
+  .about-image img {
+    width: 220px;
+    height: auto;
+  }
+
+  .about-text {
+    max-width: 100%;
+    padding: 0 10px;
+    text-align: justify;
+  }
+
+  .about-text p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .btn-ver-mas {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .service-text p {
+    font-size: 12px;
+    padding: 0 5px;
+  }
+}
+
+
+/* @MEDIA PARA SKILL */
+
+@media (max-width: 768px) {
+  .skill {
+    border-width: 2px;
+    padding: 10px;
+  }
+
+  .skill-fila1,
+  .skill-fila2,
+  .skill-fila3 {
+    width: 100%; // Asegura que se adapten al contenedor padre
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .skill-line {
+    justify-content: center;
+  }
+
+  .skill-card {
+    margin: 10px;
+    font-size: 14px;
+  }
+
+  .label {
+    font-size: 0.9rem;
+    padding-right: 5px;
+  }
+
+  #file {
+    width: 80%;
+    height: 8px;
+  }
+
+  .skill-button {
+    padding-top: 30px;
+    top: 0;
+    text-align: center;
+  }
+}
+
+
+/*@MEDIA  PARA PROJECTS*/
+@media (max-width: 768px) {
+  .project-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+  }
+
+  .project-text {
+    max-width: 90%;
+    text-align: justify;
+  }
+
+  .project-im {
+    width: 90%; /* Asegura que las tarjetas no se achiquen demasiado */
+    height: auto;
+    margin: 10px 0;
+  }
+
+  .project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .btn-light {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}

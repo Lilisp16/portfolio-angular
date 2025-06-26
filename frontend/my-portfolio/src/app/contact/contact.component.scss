@@ -1,0 +1,102 @@
+@import '../../designs';
+
+.com-contact {
+  background-color: black;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+
+    /* Borde interno */
+    border: 4px solid $fucsia; /* Borde más grueso y color */
+
+    /* Crear el borde externo triple usando pseudoelementos */
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: -8px; /* Ajusta la distancia de los bordes externos */
+      left: -8px;
+      right: -8px;
+      bottom: -8px;
+      border: 4px solid $azul-neon; /* El color de este borde es $azul-neon */
+      z-index: -1; /* Coloca los bordes detrás del contenedor */
+    }
+
+    &::after {
+      top: -16px; /* Ajusta la distancia para el borde más externo */
+      left: -16px;
+      right: -16px;
+      bottom: -16px;
+      border-color: $fucsia-neon; /* Otro color para el borde más externo */
+    }
+  }
+
+
+
+.contact-title {
+  padding-bottom: 50px;
+  font-size: 2.5rem;
+  color: $blanco;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  animation: fadeIn 1.5s ease-out;
+  border-bottom: 3px solid $fucsia;  /* Línea debajo del título */
+  padding-bottom: 20px;  /* Ajuste para crear espacio entre el texto y la línea */
+}
+
+.contact-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-btn {
+  background-color: $fucsia;
+  color: $blanco;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+  cursor: pointer;
+  text-align: center;
+
+  &:hover {
+    background-color: $azul;
+    transform: translateY(-5px);
+  }
+
+  .fas,
+  .fab {
+    font-size: 1.5rem;
+  }
+}
+
+.email-btn {
+  background-color: $azul;
+}
+
+.whatsapp-btn {
+  background-color: $verde;
+}
+
+.call-btn {
+  background-color: $amarillo;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

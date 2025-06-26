@@ -1,20 +1,29 @@
-# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+# -------------------------------------------------------
+# Archivos sensibles
+# -------------------------------------------------------
+**/src/environments/private.ts
 
-#informacin privada
-src/environments/private.ts
+# -------------------------------------------------------
+# Output compilado y temporales (Angular, TypeScript)
+# -------------------------------------------------------
+**/dist/
+**/tmp/
+**/out-tsc/
+**/.angular/cache/
+**/coverage/
+**/.sass-cache/
 
-# Compiled output
-/dist
-/tmp
-/out-tsc
-/bazel-out
+# -------------------------------------------------------
+# Dependencias (Node)
+# -------------------------------------------------------
+**/node_modules/
+npm-debug.log*
+yarn-error.log*
 
-# Node
-/node_modules
-npm-debug.log
-yarn-error.log
-
-# IDEs and editors
+# -------------------------------------------------------
+# Archivos de entorno de desarrollo / IDEs
+# -------------------------------------------------------
+# JetBrains, Eclipse, Cloud9, Sublime
 .idea/
 .project
 .classpath
@@ -24,22 +33,23 @@ yarn-error.log
 *.sublime-workspace
 
 # Visual Studio Code
-.vscode/*
+.vscode/
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-.history/*
 
-# Miscellaneous
-/.angular/cache
-.sass-cache/
-/connect.lock
-/coverage
-/libpeerconnection.log
+# -------------------------------------------------------
+# Misceláneos
+# -------------------------------------------------------
+.history/
+connect.lock
+libpeerconnection.log
 testem.log
-/typings
+typings/
 
-# System files
+# -------------------------------------------------------
+# Archivos del sistema operativo
+# -------------------------------------------------------
 .DS_Store
 Thumbs.db

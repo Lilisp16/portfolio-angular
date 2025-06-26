@@ -1,0 +1,305 @@
+
+/* -------------------------------
+  VARIABLES DE COLORES
+------------------------------- */
+$fondo: linear-gradient(to top, #03111146 0%, #688aa47e 100%);
+$gris-claro: #d1d1d1;
+$azul: #0fbeb2;
+$fucsia: #f440b5;
+$fucsia-neon: #ff00ff;
+$azul-neon: #00FFFF;
+$blanco: #ffffff;
+$gris-Arey:#141128;
+$negro: rgba(0, 0, 0, 0.8);
+$button-bg-color: #0fbeb2;
+$button-text-color: white;
+$verde:  #19be6c;
+$amarillo: #d1f64d;
+$gradient: linear-gradient(to right, #0fbeb2, #dc3eb7);
+
+
+
+
+
+$text-fucsia-neon: #ff00ff; // Definir el color fucsia-neón si no lo tienes ya
+// Crear un tema usando tus colores directamente
+$primary: $azul;  // Usar el color azul para el color primario
+$accent: $fucsia;  // Usar el color fucsia para el color de acento
+$warn: $negro;  // Usar el color negro para el color de advertencia
+
+
+.text-gradient {
+
+  font-size: 30px; // Ajusta el tamaño del texto según sea necesario
+ /* font-weight: bold; // O cualquier otra propiedad que desees aplicar
+
+  /* Aplicar el gradiente como fondo */
+  background-image: $gradient;
+
+  /* Asegurar que el fondo se aplique solo al texto */
+  -webkit-background-clip: text;
+
+  /* Color del texto necesario para que funcione */
+  color: transparent; /* Esto hace que el texto sea transparente, y el gradiente lo llena */
+  /* Añadir un padding interno */
+  padding: 10px;  /* Puedes ajustar el valor según lo necesites */
+
+  /* Agregar subrayado con color fucsia-neón */
+  text-decoration: underline; /* Aplica el subrayado */
+  text-decoration-color: $text-fucsia-neon; /* Color del subrayado */
+  text-decoration-thickness: 3px; /* Ajusta el grosor del subrayado */
+  text-decoration-style: solid; /* Estilo del subrayado (puede ser solid, dotted, dashed) */
+}
+
+
+.blue {
+
+  font-size: 30px; // Ajusta el tamaño del texto según sea necesario
+ /* font-weight: bold; // O cualquier otra propiedad que desees aplicar*/
+
+  color: $azul;
+  /* Añadir un padding interno */
+  padding: 10px;  /* Puedes ajustar el valor según lo necesites */
+  /* Agregar subrayado con color fucsia-neón */
+  text-decoration: underline; /* Aplica el subrayado */
+  text-decoration-color: $text-fucsia-neon; /* Color del subrayado */
+  text-decoration-thickness: 3px; /* Ajusta el grosor del subrayado */
+  text-decoration-style: solid; /* Estilo del subrayado (puede ser solid, dotted, dashed) */
+}
+
+/* -------------------------------
+  TIPOGRAFÍA
+------------------------------- */
+$fuente-principal: 'Arial', sans-serif;
+$fuente-secundaria: 'Helvetica', sans-serif;
+
+body {
+  font-family: $fuente-principal;
+  font-size: 16px;
+  color: $negro;
+}
+
+/* -------------------------------
+  BOTONES
+------------------------------- */
+
+
+// Definir el mixin
+// Definir el mixin
+@mixin btn-light($bg-color) {
+  background-color: transparent; /* Fondo transparente por defecto */
+  color: $bg-color; /* El texto es del color fucsia neón */
+  padding: 10px 20px;
+  border: 2px solid $bg-color; /* Añadir un borde del color fucsia */
+  border-radius: 50px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Animaciones suaves */
+
+  &:hover {
+    background-color: $azul; /* Fondo fucsia neón en el hover */
+    color: white; /* El texto se vuelve blanco cuando se pasa el cursor */
+    border-color: $bg-color; /* Mantener el borde igual al fondo */
+
+  }
+}
+
+
+
+
+@mixin btn-light2($bg-color) {
+  background-color: $bg-color;
+  color: white; /* Ajusta el color del texto si es necesario */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Animación suave */
+
+  &:hover {
+    background-color: transparent; /* Cambiar el fondo a transparente al hacer hover */
+    color: $bg-color; /* El color del texto cambia al color del fondo (fucsia) */
+    border: 2px solid $bg-color; /* Opcional: agregar un borde de color fucsia */
+  }
+}
+
+
+
+// Aplicando el mixin al botón
+.btn-light {
+  @include btn-light($fucsia-neon); /* Usa el color fucsia */
+}
+
+.btn-dark {
+  @include btn-light($azul); /* Usa el color azul */
+}
+
+
+
+
+
+/* Botón estándar */
+.btn-estandar {
+  background-color: $azul;
+  color: $blanco;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: darken($azul, 10%);
+  }
+}
+
+
+/*mixin para botones de ANGULAR MATERIAL*/
+
+
+
+
+
+/* Botón flotante extendido */
+.mat-fab.extendido {
+  background-color: $fucsia;
+  color: $blanco;
+  padding: 12px 25px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  mat-icon {
+    font-size: 24px;
+  }
+
+  &:hover {
+    background-color: darken($fucsia, 10%);
+  }
+}
+
+/* -------------------------------
+  ESTILOS PARA SECCIONES
+------------------------------- */
+
+.section-header {
+  background-color: $azul;
+  color: $blanco;
+  padding: 20px;
+  text-align: center;
+  font-size: 2rem;
+  border-radius: 10px;
+}
+
+.section-footer {
+  background-color: $negro;
+  color: $blanco;
+  padding: 20px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* -------------------------------
+  MIXINS DE DISEÑO
+------------------------------- */
+
+/* Mixin para sombras */
+@mixin sombra($horizontal: 0, $vertical: 8px, $blur: 16px, $color: rgba(0, 0, 0, 0.2)) {
+  box-shadow: $horizontal $vertical $blur $color;
+}
+
+/* Ejemplo de uso de mixin */
+.card {
+  @include sombra(0, 4px, 8px, $negro);
+  border-radius: 10px;
+  padding: 20px;
+  background-color: $blanco;
+}
+
+
+
+
+/* Mixin para iconos */
+@mixin icon-service($size: 36px, $color: #75FBFD) {
+  font-size: $size;  /* Tamaño del icono */
+  color: $color;     /* Color del icono */
+  margin-right: 10px; /* Espacio a la derecha si es necesario */
+}
+
+/* Uso del mixin para la clase de los iconos */
+.material-icons.custom {
+  @include icon-service(80px, #75FBFD); /* Llamamos al mixin con el tamaño y color que queremos */
+}
+
+/* Puedes reutilizar el mixin con diferentes tamaños o colores */
+.material-icons.custom-large {
+  @include icon-service(150px, #FF6347); /* Otro tamaño y color */
+}
+
+
+
+
+/* -------------------------------
+  MEDIA QUERIES RESPONSIVE
+------------------------------- */
+
+/* Para pantallas de 600px hacia abajo (tablets y móviles grandes) */
+@media screen and (max-width: 600px) {
+  .text-gradient,
+  .blue,
+  .section-header,
+  .section-footer {
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .btn-light,
+  .btn-dark,
+  .btn-estandar {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .card {
+    padding: 15px;
+  }
+}
+
+/* Para pantallas pequeñas (desde 350px hasta 400px) */
+@media screen and (max-width: 400px) {
+  .text-gradient,
+  .blue {
+    font-size: 16px;
+  }
+
+  .material-icons.custom {
+    font-size: 60px;
+  }
+}
+
+/* Para pantallas muy pequeñas (teléfonos pequeños, desde 320px o 350px) */
+@media screen and (max-width: 350px) {
+  .text-gradient,
+  .blue {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  .btn-light,
+  .btn-dark {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .material-icons.custom {
+    font-size: 50px;
+  }
+}

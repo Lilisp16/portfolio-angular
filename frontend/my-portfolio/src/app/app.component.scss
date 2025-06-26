@@ -1,0 +1,126 @@
+
+
+/* El contenedor principal */
+.main-container {
+  max-width: 1000px; /* El ancho máximo para el contenedor */
+  width: 100%;
+  margin: 0 auto; /* Centra el contenedor */
+  padding: 0px; /* Espaciado interno */
+  background-color: white; /* Fondo blanco */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.943); /* Sombra para el efecto 3D */
+  overflow: hidden; /* Asegura que no se desborde el contenido */
+  z-index: 2;
+}
+
+/* Estilos para el header */
+header {
+  position: relative;
+  width: 100%;
+  height: 60vh; /* Altura completa */
+  background-image: url('../assets/portada2.jpeg');
+  background-size: cover;
+  background-position: center;
+ /* filter: brightness(30%);*/
+}
+
+/* El texto dentro de la imagen (overlay) */
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Alinea los elementos a la izquierda */
+  color: white;
+  padding: 20px;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5); /* Aplica una capa oscura sobre la imagen */
+}
+
+nav {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+}
+
+.nav-list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+
+}
+
+.nav-list li {
+  font-size: 18px;
+}
+
+.nav-list li a {
+  color:  #0fbeb2;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  cursor: pointer; /* Asegúrate de que el cursor sea de tipo puntero */
+}
+
+.nav-list li a:hover {
+  color:  #ff00ffa9;
+}
+
+.h6-header{
+  color: rgb(245, 238, 238);
+}
+
+.h1-header{
+  /*font-weight: bold;*/
+  background-image: linear-gradient(to right, #0fbeb2, #dc3eb7);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 40px !important;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.h1-header, .p-header {
+  position: relative;
+  text-align: left; /* Alinea el texto a la izquierda */
+  z-index: 2;
+}
+
+.p-header{
+  color: rgb(245, 238, 238);
+  font-size: 15px;
+}
+
+
+
+/* Estilos específicos del componente para button */
+/* Cambiar el color de fondo y el borde del botón */
+.btn.btn-outline-info {
+  background-color: #0fbeb200; /* Color de fondo */
+  color: white;  /* Color del texto */
+  border-color: #0fbeb2;  /* Color del borde */
+}
+
+/* Cambiar color en hover */
+.btn.btn-outline-info:hover {
+  background-color: darken(#2de4d8, 10%);  /* Fondo más oscuro al pasar el mouse */
+}
+
+/* Footer */
+footer{
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p{
+  padding-top: 20px;
+}

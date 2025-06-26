@@ -1,0 +1,20 @@
+<div class="com-contact">
+  <p class="contact-title">Contactame</p>
+
+  <div class="contact-options">
+    <!-- Enlace para abrir la aplicación de correo -->
+    <a [href]="'mailto:' + email" class="contact-btn email-btn">
+      <i class="fas fa-envelope"></i> Send Email
+    </a>
+
+    <!-- Enlace para abrir WhatsApp -->
+    <a [href]="'https://wa.me/' + whatsapp" class="contact-btn whatsapp-btn" target="_blank">
+      <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
+
+    <!-- Enlace para llamar directamente -->
+    <a [href]="'tel:' + phone" class="contact-btn call-btn">
+      <i class="fas fa-phone-alt"></i> Call Me
+    </a>
+  </div>
+</div>

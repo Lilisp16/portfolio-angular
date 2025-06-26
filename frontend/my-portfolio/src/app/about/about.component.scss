@@ -1,0 +1,364 @@
+/* about.component.scss */
+@import '../../designs';
+
+.about-container {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+  background-color: black;
+  /*background-image: linear-gradient(to top, #fdcbf1cd 0%, #fdcbf185 1%, #e6dee984 100%);*/
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  color: #333;
+
+  h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #0fbeb2;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+
+    /* Agregar una línea debajo */
+  border-bottom: 1px solid #0fbeb2; /* Cambia el grosor y el color según lo desees */
+  padding-bottom: 10px; /* Un poco de espacio entre el texto y la línea */
+  }
+
+  section {
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #0fbeb2;
+    text-transform: capitalize;
+    padding-bottom: 5px;
+  }
+
+
+  .education {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra todo el contenido dentro de la sección */
+    text-align: center; /* Centra el texto dentro de los elementos */
+  }
+
+  .education ul {
+    list-style-type: none; /* Elimina los puntos de los elementos <li> */
+    padding: 0; /* Elimina el espacio de padding predeterminado */
+    margin: 0; /* Elimina el margen predeterminado */
+    color: gray;
+  }
+
+  .education li {
+    margin-bottom: 10px; /* Espacio entre los elementos <li> */
+    font-size: 18px; /* Ajusta el tamaño de la fuente */
+  }
+
+
+
+
+  .education h3{
+    color: #51505088;
+  }
+
+ .education h5{
+  color:#5b5a5a;
+  font-size: 40px;
+  }
+
+.ing {
+  align-items: center;
+}
+
+
+
+  .courses h3{
+    width: 30px;
+    padding: 50px;
+    margin-right: 100px;
+
+  }
+
+  .experience h3{
+    border-bottom: 10px solid #0fbeb2;
+  }
+  .habilidades h3{
+    border-bottom: 10px solid #0fbeb2;
+  }
+
+
+
+  .uls {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 20px;
+
+    li {
+      font-size: 18px;
+      margin-bottom: 20px;
+      position: relative;
+      padding-left: 25px;
+      background-color: #f9f9f9a7;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+
+      strong {
+        font-weight: bold;
+        color: #03a095;
+      }
+
+      em {
+        font-style: italic;
+        color: #888;
+      }
+
+      p {
+        font-size: 16px;
+        margin-top: 5px;
+        color: #555;
+        line-height: 1.6;
+      }
+
+      &:hover {
+        background-color: rgba(15, 190, 178, 0.1);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        transform: translateX(10px);
+        padding-left: 30px;
+      }
+    }
+  }
+
+  /* Estilos para la sección de Experiencia Profesional */
+  .experience-principal {
+    display: flex; /* Usamos Flexbox para alinear los elementos en línea */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Centra los elementos verticalmente */
+    gap: 3px; /* Espacio entre los contenedores */
+    flex-wrap: wrap; /* Asegura que los elementos se ajusten en pantallas pequeñas */
+  }
+
+  .experience {
+    margin-left: 40px;
+    flex: 1;
+    max-width: 48%;
+    /*background: #5b5757;*/
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    h3 {
+      color: #0fa99e;
+      font-weight: bold;
+    }
+
+    .uls {
+      li {
+        background: #c5e0dd;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        &:hover {
+          background: #d1e8e7;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+
+/* Estilos para el icono cubo */
+.experience-logo {
+  margin-right: 50px;
+  font-size: 250px; /* Tamaño grande para el ícono */
+  color: #14c9cc81; /* Color de Tinkercad (amarillo) */
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.2); /* Efecto de escala al pasar el mouse */
+  }
+}
+
+
+  /* Estilos para la sección de Habilidades */
+  .habilidades {
+    align-items: center;
+  flex: 1;
+  max-width: 60%;
+  /*background: #5b5757;*/
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;  /* Esto centra el contenedor dentro de su contenedor padre */
+  display: flex;
+  flex-direction: column;  /* Asegura que el contenido esté en columna */
+
+
+  position: relative; /* Necesario para los pseudoelementos */
+
+
+  /* Agregar una línea horizontal encima del contenedor */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: $azul-neon; /* Color de la línea */
+    border-radius: 5px;
+  }
+
+  /* Línea decorativa en la parte inferior */
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: $fucsia; /* Color de la línea */
+    border-radius: 5px;
+  }
+
+  /* Línea diagonal que pasa desde la esquina superior derecha a la inferior izquierda */
+  & .diagonal-line {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 140%;
+    height: 3px;
+    background: $amarillo; /* Color de la línea diagonal */
+    transform: rotate(45deg);
+    border-radius: 5px;
+  }
+    h3 {
+      color: #0fa99e;
+      font-weight: bold;
+    }
+
+    .uls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      li {
+        background-color: #a2cbc6;
+        padding: 15px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        width: calc(33% - 10px); /* Para que se acomoden en 3 columnas */
+        text-align: center;
+        transition: all 0.3s ease;
+        &:hover {
+          background-color: #f6bff5;
+          transform: scale(1.05);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+
+
+}
+
+
+ /* Diseño responsivo para el componente About */
+
+@media (max-width: 768px) {
+  section {
+    display: block;
+    padding: 1rem;
+  }
+
+
+
+  .experience,
+  .habilidades {
+    max-width: 100%;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    word-break: break-word;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .about-text p {
+    font-size: 0.95rem;
+  }
+
+  .habilidades li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .habilidades ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .habilidades li {
+    flex: 1 1 calc(50% - 10px); // 2 por fila con margen
+    box-sizing: border-box;
+    font-size: 0.95rem;
+    background-color: #f5f5f5;
+    padding: 8px;
+    border-radius: 6px;
+    text-align: center;
+  }
+}
+
+/* Para pantallas aún más pequeñas, una por fila */
+@media (max-width: 400px) {
+  .habilidades li {
+    flex: 1 1 100%;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .ing {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+
+  }
+
+  .ing h5 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem !important;
+    white-space: normal;
+    word-break: break-word;
+    margin: 0;
+  }
+
+  .ing em {
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+}
+
