@@ -104,9 +104,14 @@
 /* Estilos para el spinner y el mensaje de carga */
 
   .project-image {
-    position: relative;
+  position: relative;
+  width: 100%;
+  height: 300px;
+
+  iframe {
     width: 100%;
     height: 300px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
   }
 
   #loading-message {
@@ -118,27 +123,24 @@
     color: #555;
     font-size: 16px;
     z-index: 1;
-  }
+    background: #fff;
+    padding: 10px;
+    border-radius: 6px;
 
-  .spinner {
-    border: 4px solid rgba(0, 0, 0, 0.1);
-    border-left-color: #333;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    margin: 0 auto 10px;
-    animation: spin 1s linear infinite;
-  }
+    .spinner {
+      border: 4px solid rgba(0, 0, 0, 0.1);
+      border-left-color: #333;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      margin: 0 auto 10px;
+      animation: spin 1s linear infinite;
+    }
 
-  @keyframes spin {
-    to {
-      transform: rotate(360deg);
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
     }
   }
-
-  iframe {
-    width: 100%;
-    height: 300px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    display: none; /* Se mostrará después de cargar */
-  }
+}
