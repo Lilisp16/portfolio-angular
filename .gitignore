@@ -1,8 +1,10 @@
 # -------------------------------------------------------
 # Archivos sensibles
 # -------------------------------------------------------
-**/src/environments/private.ts
+**/private.ts
 
+
+frontend/my-portfolio-backup/
 # -------------------------------------------------------
 # Output compilado y temporales (Angular, TypeScript)
 # -------------------------------------------------------
