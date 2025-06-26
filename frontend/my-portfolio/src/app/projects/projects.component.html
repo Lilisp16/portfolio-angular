@@ -196,8 +196,19 @@
 
 <div class="project-card">
   <div class="project-image">
-    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="300" src="https://embed.figma.com/proto/aThk1sun31at9dOJmDQcWs/Airbnb-clon?node-id=1-2&starting-point-node-id=1%3A2&embed-host=share" allowfullscreen></iframe>
+    <!-- Mensaje de carga -->
+    <div id="loading-message">
+      <div class="spinner"></div>
+      Cargando prototipo, por favor espera...
+    </div>
+
+    <!-- Iframe del prototipo -->
+    <iframe id="figma-iframe"
+      src="https://embed.figma.com/proto/aThk1sun31at9dOJmDQcWs/Airbnb-clon?node-id=1-2&starting-point-node-id=1%3A2&embed-host=share"
+      allowfullscreen>
+    </iframe>
   </div>
+
   <div class="project-info">
     <h3 class="project-title">Prototipo Clon de Airbnb</h3>
     <p class="project-description">
@@ -209,7 +220,8 @@
       <li>Prototipado</li>
     </ul>
     <div class="project-links">
-      <a href="https://www.figma.com/proto/aThk1sun31at9dOJmDQcWs/Airbnb-clon?node-id=1-2&starting-point-node-id=1%3A2" target="_blank" class="project-link">Ver en Figma</a>
+      <a href="https://www.figma.com/proto/aThk1sun31at9dOJmDQcWs/Airbnb-clon?node-id=1-2&starting-point-node-id=1%3A2"
+        target="_blank" class="project-link">Ver en Figma</a>
     </div>
   </div>
 </div>
@@ -219,3 +231,13 @@
   </div>
 </div>
 
+<!-- Script para ocultar el mensaje una vez el iframe cargue -->
+<script>
+  const iframe = document.getElementById('figma-iframe');
+  const loadingMessage = document.getElementById('loading-message');
+
+  iframe.addEventListener('load', () => {
+    loadingMessage.style.display = 'none'; // Oculta el mensaje
+    iframe.style.display = 'block'; // Muestra el iframe
+  });
+</script>
